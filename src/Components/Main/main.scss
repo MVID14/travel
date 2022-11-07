@@ -1,0 +1,152 @@
+:root{
+    --PrimaryColor: hsl(199,100%,33%);
+    --SecondaryColor: hsl(187,85%,43%);
+    --gradientColor: linear-gradient(to right,hsl(187,85%,43%),hsl(199,100%,33%));
+    --whiteColor: hsl(0,0%,100%);
+    --blackColor: hsl(201,33%,16%);
+    --textColor: hsl(240,4%,36%);
+    --whiteColorDeam:hsl(0,0%,93%);
+    --greyText:rgb(190,190,190);
+    --inputColor: rgb(239,239,239);
+    --bodyColor:rgb(240,240,246);
+    --cardBG:rgb(225,225,235);
+    --cardHover:rgb(255,255,255)
+}
+
+
+.main{
+    width: 100%;
+
+    .secTitle{
+      
+        .title{
+            position: relative;
+            width: max-content;
+            color: var(--textColor);
+            margin: 1rem 0;
+            z-index: 2;
+
+            &::after{
+                position: absolute;
+                z-index: 1;
+                content: '';
+                background: var(--SecondaryColor);
+                height: 5px;
+                width: 110px;
+                right: 0;
+                bottom: .1px;
+            }
+        }
+
+    }
+
+    .secContent{
+        justify-content: center;
+        gap: 1.5rem;
+
+        .singleDestination{
+            display: grid;
+            // padding: 1rem;
+            height: 100%;
+            width: 100%;
+            background: var(--cardBG);
+            align-items: center;
+            border-radius: 10px;
+            row-gap: 1rem;
+            box-shadow: 0 2px 4px rgb(140,140,140,0.549);
+            overflow: hidden;
+
+            &:hover{
+                background: var(--cardHover);
+                box-shadow: 1 4px 4px rgb(85,85,85,0.549);
+                transition: .3s ease-in;
+            }
+            .imgDiv{
+                height: 240px;
+                width: 100%;
+                overflow: hidden;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+
+                    transition: 1.5s ease;
+                }
+                :hover{
+                    transform: scale(1.1);
+                }
+
+            }
+            .cardInfo{
+                padding: 1rem;
+                .destTitle{
+                    color: var(--blackColor);
+                    font-size: 1.25rem;
+                }
+                .continent{
+                    gap: .5rem;
+                    .icon{
+                        font-size: 18px;
+                    }
+                    .location{
+                        color: var(--textColor);
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+                .fees{
+                    width: 100%;
+                    justify-content: space-around;
+                    margin: 1rem 0;
+                    padding: 1rem 0;
+                    border-top: 1px solid rgb(85,85,85,0.449);
+                    border-bottom: 1px solid rgb(85,85,85,0.449) ;
+
+                    .grade{
+                        max-width: 100px;
+                        line-height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: var(--textColor);
+
+                        small{
+                            background: var(--gradientColor);
+                            color: var(--whiteColor);
+                            padding: 1px 8px;
+                            border-radius: 10px;
+                            font-size: 10px;
+                        }
+                    }
+                    .price{
+                        font-size: 1.5rem;
+                        color: var(--blackColor);
+                    }
+                }
+                .description{
+                    font-size: 13.5px;
+                    font-weight: 500;
+                    line-height: 18px;
+                    color: var(--textColor);
+
+                }
+                .btn{
+                    margin-top: 1rem;
+                    color: var(--whiteColor);
+                    gap: 0.5rem;
+                    font-weight: 600;
+                    justify-content: space-between;
+                    .icon{
+                        font-size: 20px;
+                        align-items: center;
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+
