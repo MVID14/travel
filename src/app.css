@@ -78,3 +78,16 @@ body{
 }
 
 /* css mac dinh  */
+
+
+/* MEDIA QUERIES  */
+
+@media screen and (min-width:1240px) {
+    .container{
+        width: 80% !important; 
+        margin: auto !important; 
+    }
+    .section{
+        margin:  6rem 0 4rem;
+    }
+}

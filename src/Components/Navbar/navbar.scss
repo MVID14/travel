@@ -170,5 +170,28 @@
 @media screen and (min-width:1240px) {
     .header{
        padding: 1rem 7rem;
+
+       .navBar{
+
+        .navItem{
+            .navLink{
+                color: var(--textColor);
+                font-size: 1.1rem;
+                padding: 0 0.45rem;
+                font-weight: 500;
+                padding: 18px;
+                &:hover{
+                    color: var(--PrimaryColor);
+                }
+            }
+            
+        }
+        .btn{
+            margin-left: 1rem;
+            a{
+                font-weight: 500;
+            }
+        }
+    }
     }
 }

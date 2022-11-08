@@ -19,10 +19,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    // margin: auto;
 
     .videoDiv{
         position: absolute;
+        width: 100%;
         height: 100%;
         video{
             height: 100%;
@@ -206,6 +207,126 @@
                 small{
                     font-size: 10px;
                     color: var(--whiteColor);
+                }
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES ============================>
+
+@media screen and (min-width: 500px) {
+    .footer{
+
+        .secContent{
+
+            .footerCard{
+
+                .footerLinks{
+                    grid-template-columns: repeat(3,1fr);
+                    padding-bottom: 1rem;
+                }
+
+                .footerDiv{
+                    justify-content: space-between;
+                    flex-direction: row;
+
+                    small{
+                        font-size: 14px;
+                        color: var(--whiteColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .footer{
+
+        .secContent{
+            
+            .contactDiv{
+                flex-direction: row;
+                justify-content: space-between;
+
+                .text{
+
+                    h2{
+                        font-size: 1.58rem;
+                    }
+                }
+                .inputDiv{
+                    width: max-content;
+                    flex-direction: row;
+                    justify-content: flex-start;
+
+                    input{
+                        width: 60%;
+                    }
+                    .btn{
+                        width: max-content;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .footer{
+        padding: 5rem 2rem;
+        .secContent{
+            .footerCard{
+                flex-direction: row;
+    
+                .footerLinks{
+                    grid-template-columns: repeat(3,1fr);
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .footer{
+        padding: 5rem 4rem;
+
+        .videoDiv{
+            width: 130%;
+        }
+        .secContent{
+            width: 100% !important;
+    margin: auto !important;
+            .footerCard{
+
+                .footerIntro{
+
+                    .footerPara{
+                        font-size: 15px;
+                        color: var(--textColor);
+                    }
+                    .footerSocials{
+                        gap: .5rem;
+
+                        .icon{
+                            font-size: 25px;
+                            color: var(--textColor);
+
+                            &:hover{
+                                color: var(--PrimaryColor);
+                            }
+                        }
+                    }
+                }
+                .footerLinks{
+                    .linkGroup{
+                        .footerList{
+                            font-size: 16px;
+                            padding: 5px 0;
+                        }
+                    }
                 }
             }
         }

@@ -150,3 +150,39 @@
     }
 }
 
+
+@media screen and (min-width:500px) {
+    .title{
+        font-size: 1.5erm;
+        &::after{
+            width: 110px !important;
+        }
+    }
+
+    .secContent{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .singleDestination{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:840px) {
+   .secContent{
+    grid-template-columns: repeat(3,1fr);
+
+    .singleDestination{
+        height: auto;
+    }
+   }
+   
+}
+
+
+@media screen and (min-width:1240px) {
+    
+}
+
+@media screen and (min-width:1880px) {
+   
+}
